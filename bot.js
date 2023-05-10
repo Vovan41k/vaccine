@@ -34,21 +34,20 @@ bot.on('callback_query', (query) => {
         })
 
     } else if (prefix === 'Aze') {
-            try {
-                bot.on('message', msg => {
-                    bot.sendMessage(query.msg.chat.id, 'Тип вакцины', {
-                        reply_markup: {
-                            keyboard: [
-                                ['Корь, паротит, краснуха(КПК)', 'Дифтерия-столбняк'],
+        try {
+            bot.on('message', msg => {
+                bot.sendMessage(query.msg.chat.id, 'Тип вакцины', {
+                    reply_markup: {
+                        keyboard: [
+                            ['Корь, паротит, краснуха(КПК)', 'Дифтерия-столбняк'],
                             ['Грипп', 'Гепатит А'],
                             ['Брюшной тиф', 'Гепатит В'],
                             ['Бешенство', 'Полиомиелит'],
-                        ]   
+                        ]
                     }
                 })
             })
 
-            bot.sendMessage(chatId, JSON.stringify(msg))
             if (msg.text === "Корь, паротит, краснуха(КПК)") {
                 bot.sendMessage(chatId, 'Для всех путешественников, родившихся после 1956 года, рекомендуется сделать 2 дозы вакцины, если до этого данная прививка не делалась.')
             } else if (msg.text === 'Дифтерия-столбняк') {
