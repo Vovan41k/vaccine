@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bot": "nodemon ./bot.js"
+    "bot": "nodemon ./bot.js",
+    "parse": "nodemon ./parse.js",
+    "sce": "nodemon ./scenario.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "homepage": "https://github.com/Vovan41k/vaccine#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "node-telegram-bot-api": "^0.61.0"
+    "node-telegram-bot-api": "^0.61.0",
+    "papaparse": "^5.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
